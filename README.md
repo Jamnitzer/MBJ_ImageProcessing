@@ -1,6 +1,7 @@
 # MBJ_ImageProcessing
 
-A conversion to Swift of the example MBE_ImageProcessing from the blog "Metal by Example" written by Warren Moore.
+A conversion to Swift of the example MBE_ImageProcessing written by Warren Moore.
+[Metal By Example](http://metalbyexample.com)
 
 Converted to Swift by Jamnitzer (Jim Wrenholt)
 
