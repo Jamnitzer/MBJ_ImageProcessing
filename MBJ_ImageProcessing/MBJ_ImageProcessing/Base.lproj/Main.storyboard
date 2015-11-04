@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9052" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9040"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MBJViewController" customModule="MBJ_ImageProcessing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PFe-CA-Jy9">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                            <view opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dhM-vh-Bkf" userLabel="Control Container View">
+                                <rect key="frame" x="20" y="496" width="300" height="84"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="7" translatesAutoresizingMaskIntoConstraints="NO" id="jzm-ge-ZoG">
+                                        <rect key="frame" x="97" y="8" width="197" height="31"/>
+                                        <animations/>
+                                        <connections>
+                                            <action selector="blurRadiusDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="z1f-jD-A6E"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blur Radius" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaA-z5-gCU">
+                                        <rect key="frame" x="8" y="12" width="83" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="O34-2o-tuV">
+                                        <rect key="frame" x="97" y="46" width="197" height="31"/>
+                                        <animations/>
+                                        <connections>
+                                            <action selector="saturationDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="n5x-wn-08F"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Saturation" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WC-QD-KSq">
+                                        <rect key="frame" x="8" y="50" width="83" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="0.51000000000000001" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="7OU-8X-nmg"/>
+                                    <constraint firstAttribute="height" constant="84" id="hP6-DA-pS1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PFe-CA-Jy9" secondAttribute="trailing" id="AxR-zM-n7g"/>
+                            <constraint firstItem="PFe-CA-Jy9" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="c7e-8d-cGw"/>
+                            <constraint firstItem="PFe-CA-Jy9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gDo-98-xcf"/>
+                            <constraint firstItem="PFe-CA-Jy9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sQ0-YG-siv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blurRadiusSlider" destination="jzm-ge-ZoG" id="iza-d3-ElB"/>
+                        <outlet property="imageView" destination="PFe-CA-Jy9" id="6T7-7O-CC7"/>
+                        <outlet property="saturationSlider" destination="O34-2o-tuV" id="wsj-4Y-RII"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="148" y="179"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LV7-Ad-LLy">
+            <objects>
+                <viewController id="whP-Do-3lh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wh9-aZ-UlD"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vph-iP-X46"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PKf-Ws-1bW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6We-mj-cz5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="523" y="376"/>
+        </scene>
+    </scenes>
+</document>
